@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div>
+  <h1
+    [ngClass]="{ 'red-text': !displayTextFlag, 'green-text': displayTextFlag }"
+    (click)="toggleText()"
+  >
+    NG CLASS
+  </h1>
+  <h1
+    [ngStyle]="{
+      color: displayTextFlag ? 'green' : 'red',
+      'font-style': displayTextFlag ? 'italic' : 'normal'
+    }"
+  >
+    NG STYLE
+  </h1>
+</div>
+<app-footer></app-footer>
